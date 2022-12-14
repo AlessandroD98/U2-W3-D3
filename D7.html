@@ -35,7 +35,7 @@
 
   <body>
     <div>
-      <h1>Questo è il titolo della pagina</h1>
+      <h1 onclick="makeItClickable()">Questo è il titolo della pagina</h1>
       <h2>Questo è il sottotitolo della pagina</h2>
     </div>
 
@@ -93,7 +93,7 @@
 
       const addClassToTitle = function () {
         const title = document.querySelector("h1");
-        title.className = "myHeading";
+        title.classList.add = "myHeading";
       };
       addClassToTitle;
 
@@ -115,7 +115,7 @@
         */
 
       const changeUrls = function () {
-        const changea = document.querySelector("a");
+        const changea = document.querySelector("a"); // solo 2 a evito loop
         changea.href = "https://www.google.com";
       };
       changeUrls;
@@ -171,7 +171,11 @@
          Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
         */
 
-      const makeItClickable = function () {};
+      const makeItClickable = function () {
+        const h1 = document.querySelector("h1");
+        h1.innerText = h1.innerText.substring(0, h1.innerText.length - 1);
+      };
+
       /* ESERCIZIO 10
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
