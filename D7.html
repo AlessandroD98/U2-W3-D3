@@ -173,7 +173,7 @@
 
       const makeItClickable = function () {
         const h1 = document.querySelector("h1");
-        h1.innerText = h1.innerText.substring(0, h1.innerText.length - 1);
+        h1.innerText = h1.innerText.slice(0, -1);
       };
 
       /* ESERCIZIO 10
